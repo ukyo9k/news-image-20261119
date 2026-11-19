@@ -179,18 +179,15 @@ def main():
         ("DIPLOMACY — SHENZHEN", "summit",
          "THREE LEADERS, ONE TABLE",
          "Trump, Xi and Putin meet in Shenzhen today — a first-ever "
-         "trilateral, with nuclear arms control on the agenda and a "
-         "Trump–Putin one-on-one beside it."),
+         "trilateral on nuclear arms; a Trump–Putin one-on-one too."),
         ("JUSTICE — THE HAGUE", "court",
          "WORLD COURT RULES ON MYANMAR",
          "The ICJ delivers its genocide verdict on the Rohingya today — "
-         "seven years on, the court has never before found a state guilty "
-         "of genocide."),
+         "seven years on, no state has ever been found guilty."),
         ("SPACE — VOYAGER 1", "probe",
          "ONE LIGHT-DAY FROM HOME",
-         "NASA confirms Voyager 1 crossed the mark at 05:16 EST on "
-         "Wednesday — 16.1 billion miles out, a signal now takes a full "
-         "day to arrive."),
+         "NASA confirms Voyager 1 crossed the mark at 05:16 EST "
+         "Wednesday — 16.1 billion miles out; a signal takes a day."),
     ]
     col_w = 320
     for i, (kick, icon, head, deck) in enumerate(top3):
@@ -202,9 +199,9 @@ def main():
         y = para(d, x, y + 52, head, fnt(SANS_B, 20), INK, col_w, 23,
                  max_lines=2)
         para(d, x, y + 4, deck, fnt(SANS, 14), (40, 40, 40), col_w, 17,
-             max_lines=4)
+             max_lines=3)
 
-    rule(d, 528)
+    rule(d, 540)
 
     # ---------- grid 2x3 ----------
     grid = [
@@ -233,11 +230,11 @@ def main():
          "LPG carrier Gas Husky sank off Bulgaria; all 19 crew rescued. "
          "A second ship was lost in 24 hours."),
     ]
-    gw, gh = 320, 104
+    gw, gh = 320, 100
     for i, (kick, head, deck) in enumerate(grid):
         col, row = i % 3, i // 3
         x = 24 + col * (gw + 8)
-        y = 542 + row * (gh + 6)
+        y = 554 + row * (gh + 6)
         d.text((x, y), kick, font=fnt(SANS_B, 12), fill=RED)
         y = para(d, x, y + 18, head, fnt(SANS_B, 18), INK, gw, 21,
                  max_lines=2)
